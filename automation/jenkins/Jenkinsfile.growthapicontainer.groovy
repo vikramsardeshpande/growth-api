@@ -2,7 +2,7 @@ containerName = "growth-api-container"
 container_version = "1.0.0.${env.BUILD_NUMBER}"
 dockerTag = "${containerName}:${container_version}"
 
-node("dockerlinuxspot")
+node()
 {
 
     timestamps {
