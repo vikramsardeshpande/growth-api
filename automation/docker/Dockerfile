@@ -2,9 +2,9 @@
 FROM microsoft/powershell:ubuntu-16.04
 
 # Install packages
-#RUN apt-get update
-#RUN apt-get -y install wget python-pip python-dev libyaml-dev zip jq postgresql-client redis-tools
-#RUN pip install awscli pandas redis
+RUN apt-get update
+RUN apt-get -y install wget python-pip python-dev libyaml-dev zip jq postgresql-client redis-tools
+RUN pip install awscli pandas redis
 RUN export PATH=$PATH:/usr/local/bin
 
 # Setup SSL

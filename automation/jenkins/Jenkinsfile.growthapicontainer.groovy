@@ -21,7 +21,7 @@ node()
               withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'jenkins-aws-dev', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]){
                 sh "eval `aws ecr get-login --no-include-email --region us-east-1`"
                 sh "docker tag ${dockerTag} 239641032376.dkr.ecr.us-east-1.amazonaws.com/devops/${dockerTag}"
-                sh "docker push 294074132694.dkr.ecr.us-east-1.amazonaws.com/devops/${dockerTag}"
+                sh "docker push 239641032376.dkr.ecr.us-east-1.amazonaws.com/devops/${dockerTag}"
             }
         }
 
