@@ -54,8 +54,7 @@ pipeline {
 
                 buildEnv.inside {
                 withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'jenkins-aws-dev', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]){
-                sh "eval `aws ecr get-login --no-include-email --region us-east-1`"
-                }
+                 }
                 sh '/bin/bash scripts/test.sh'
                 
                 }
