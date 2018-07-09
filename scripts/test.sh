@@ -1,4 +1,2 @@
 #!/bin/bash  
-echo " copy the password file to /tmp" 
-cp -p /etc/passwd /tmp 
-
+aws s3api create-bucket --bucket my-bucket-vikram-delete --region us-east-1
