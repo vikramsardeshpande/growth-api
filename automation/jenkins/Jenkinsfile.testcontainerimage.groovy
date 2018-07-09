@@ -16,11 +16,8 @@ pipeline {
 
         parameters {
             choice(name: 'account', choices: 'development\npipeline\nproduction', description: '')
-            string(name: 'zone', defaultValue: '', description: '')
-            string(name: 'partnerName', defaultValue: 'TestPartner', description: '')
-            string(name: 'partnerRenaissanceId', defaultValue: '', description: '')
-            string(name: 'tenants', defaultValue: '', description: '')
-
+            string(name: 'bucket-name', defaultValue: '', description: 'Enter the bucket name that you want to create')
+            
         }
 
     stages {
