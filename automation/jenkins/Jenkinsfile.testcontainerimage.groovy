@@ -51,7 +51,7 @@ pipeline {
 
                 buildEnv.inside {
                 withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'jenkins-aws-dev', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]){
-                sh '/bin/bash scripts/test.sh'
+                    sh 'aws s3api create-bucket --bucket ${params.bucket-name} --region us-east-1'
                 }
                 }
               }
