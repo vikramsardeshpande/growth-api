@@ -53,7 +53,7 @@ pipeline {
 
                 buildEnv.inside {
 
-                    sh scripts/test.sh
+                    sh '/bin/bash scripts/test.sh'
                     
                 }
               }
